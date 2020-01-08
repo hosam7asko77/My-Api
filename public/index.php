@@ -70,6 +70,7 @@ $app->post('/createUser', function (Request $request, Response $response, array 
     $error_detail['message']='require param '.substr($error_params,0,-3).'are missing or empty';
     $response->getBody()->write(json_encode($error_detail));
   }
+  
   return $error;
 }
 
